@@ -108,6 +108,7 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # I want to always be in ~/devo
+mkdir -p ~/devo
 cd ~/devo
 
 # Add zig to the path
