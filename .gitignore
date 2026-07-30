@@ -1,0 +1,21 @@
+# Ignore everything
+*
+!.gitignore
+
+###### .config
+!.config/
+!.config/nvim/
+!.config/nvim/**
+
+!.config/konsole/
+!.config/konsole/**
+.config/konsole/bookmarks*
+
+###### shell
+!.zshrc
+!.bashrc
+!.bash_profile
+!.bash_logout
+
+###### git
+!.gitconfig
