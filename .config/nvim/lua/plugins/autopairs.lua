@@ -1,9 +1,7 @@
-local conf = {
+return {
     'windwp/nvim-autopairs',
+    event = "InsertEnter",
+    config = true
     -- use opts = {} for passing setup options
     -- this is equivalent to setup({}) function
 }
-conf.event = "InsertEnter"
-conf.config = true
-
-return conf

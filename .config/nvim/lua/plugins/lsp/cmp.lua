@@ -1,5 +1,10 @@
-local cmp_spec = {
+-- lua/plugins/cmp.lua
+-- 
+-- [NOTE]: this file is fully created by claude (Sonnet 5 : Low), 
+-- I can't guarantee that this is all ok. Please check for yourself.
+return {
   "hrsh7th/nvim-cmp",
+  event = { "InsertEnter", "VeryLazy" },
   dependencies = {
     "hrsh7th/cmp-nvim-lsp",
     "hrsh7th/cmp-buffer",
@@ -8,6 +13,10 @@ local cmp_spec = {
     "saadparwaiz1/cmp_luasnip",
   },
   config = function()
+    vim.lsp.config("*", {
+      capabilities = require("cmp_nvim_lsp").default_capabilities(),
+    })
+
     local cmp = require("cmp")
     local luasnip = require("luasnip")
 
@@ -18,20 +27,19 @@ local cmp_spec = {
         end,
       },
       mapping = cmp.mapping.preset.insert({
+        ["<C-n>"] = cmp.mapping.select_next_item(),
+        ["<C-p>"] = cmp.mapping.select_prev_item(),
         ["<C-Space>"] = cmp.mapping.complete(),
         ["<CR>"] = cmp.mapping.confirm({ select = true }),
-        ["<Tab>"] = cmp.mapping.select_next_item(),
-        ["<S-Tab>"] = cmp.mapping.select_prev_item(),
       }),
       sources = cmp.config.sources({
+        { name = "lazydev", group_index = 0 }, -- NEU
         { name = "nvim_lsp" },
         { name = "luasnip" },
-        { name = "path" },
       }, {
         { name = "buffer" },
+        { name = "path" },
       }),
     })
   end,
 }
-
-return cmp_spec

@@ -131,3 +131,55 @@ vim() {
 	# just redirect to nvim
 	nvim "$@"
 }
+
+# because aur is really dangerous, here a quick way to prove if package `$1` is infected:
+aur-check() {
+    if [ "$#" -eq 0 ]; then
+        echo "Usage: aur-check <package> [package2] ..." >&2
+        return 1
+    fi
+
+    local cache="${XDG_CACHE_HOME:-$HOME/.cache}/aur-malware-list.txt"
+    local cache_max_age=86400  # 1 day, seconds
+
+    local need_refresh=1
+    if [ -f "$cache" ]; then
+        local age=$(( $(date +%s) - $(stat -c %Y "$cache" 2>/dev/null || stat -f %m "$cache") ))
+        [ "$age" -lt "$cache_max_age" ] && need_refresh=0
+    fi
+
+    if [ "$need_refresh" -eq 1 ]; then
+        local urls=(
+            "https://raw.githubusercontent.com/lenucksi/aur-malware-check/master/data/campaigns/aur-infected/packages.txt"
+            "https://raw.githubusercontent.com/lenucksi/aur-malware-check/master/data/campaigns/aur-infected/packages-extra.txt"
+            "https://raw.githubusercontent.com/lenucksi/aur-malware-check/master/data/campaigns/chaos-rat/packages.txt"
+            "https://raw.githubusercontent.com/lenucksi/aur-malware-check/master/data/campaigns/russian-spam/packages.txt"
+        )
+        local tmp; tmp=$(mktemp)
+        local ok=0
+        for u in "${urls[@]}"; do
+            curl -fsS "$u" >> "$tmp" 2>/dev/null && ok=1
+        done
+        if [ "$ok" -eq 0 ]; then
+            echo "Error: could not fetch any malware list (network issue?)." >&2
+            rm -f "$tmp"
+            [ -f "$cache" ] || return 1
+            echo "Falling back to stale cache." >&2
+        else
+            mkdir -p "$(dirname "$cache")"
+            sort -u "$tmp" -o "$cache"
+            rm -f "$tmp"
+        fi
+    fi
+
+    local exit_code=0
+    for pkg in "$@"; do
+        if grep -qiFx "$pkg" "$cache"; then
+            echo "INFECTED — DO NOT INSTALL: $pkg"
+            exit_code=2
+        else
+            echo "Clean: $pkg"
+        fi
+    done
+    return "$exit_code"
+}
