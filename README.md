@@ -6,6 +6,7 @@ Here are all my dotfiles i care about
 - Zsh
 - Bash
 - nvim
+- konsole
 - git
 - and more...
 
