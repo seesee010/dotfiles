@@ -28,7 +28,7 @@ Third colorscheme (only loaded never used any more):
 
 [vesper](https://github.com/datsfilipe/vesper.nvim)
 
-#### Plugins I usually use
+#### All my plugins
 
 (From lazy.vim):
 
