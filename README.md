@@ -8,6 +8,7 @@ Here are all my dotfiles i care about
 - [bash](#bash)
 - [konsole](#konsole)
 - [git](#git)
+- [Installation guide](#install)
 
 ## My setup
 
@@ -114,6 +115,10 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 ### git
 
 > From Oh my zsh, the git plugin
+
+## install
+
+
 
 ## License
 [LICENSE](https://github.com/seesee010/dotfiles/blob/master/LICENSE)
