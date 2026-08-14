@@ -22,7 +22,7 @@ Secondary colorscheme (only for: sh, zsh, bash):
 
 [kanagawa](https://github.com/rebelot/kanagawa.nvim)
 
-![colorscheme-kangawa](img/colorscheme-kangawa.png)
+![colorscheme-kanagawa](img/colorscheme-kangawa.png)
 
 Third colorscheme (only loaded never used any more):
 
@@ -121,13 +121,13 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 ### Dangerous
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/seesee010/dotfiles/master/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/seesee010/dotfiles/master/script/install.sh | bash
 ```
 
 ### Better way
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/seesee010/dotfiles/master/install.sh -o install.sh
+curl -fsSL https://raw.githubusercontent.com/seesee010/dotfiles/master/script/install.sh -o install.sh
 chmod +x install.sh
 
 vim install.sh # check the install.sh file
