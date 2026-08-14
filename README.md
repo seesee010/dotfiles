@@ -2,17 +2,16 @@
 
 Here are all my dotfiles i care about
 
-## What's included
-- Zsh
-- Bash
-- nvim
-- konsole
-- git
-- and more...
+## TOC
+- [nvim](#nvim)
+- [zsh](#zsh)
+- [bash](#bash)
+- [konsole](#konsole)
+- [git](#git)
 
 ## My setup
 
-### [nvim](https://neovim.io/) 
+### nvim
 
 Main colorscheme: [bamboo](https://github.com/ribru17/bamboo.nvim)
 
@@ -20,7 +19,7 @@ Main colorscheme: [bamboo](https://github.com/ribru17/bamboo.nvim)
 
 Secondary colorscheme (only for: sh, zsh, bash):
 
-[kangawa](https://github.com/rebelot/kanagawa.nvim)
+[kanagawa](https://github.com/rebelot/kanagawa.nvim)
 
 ![colorscheme-kangawa](img/colorscheme-kangawa.png)
 
@@ -71,6 +70,50 @@ Third colorscheme (only loaded never used any more):
 7 directories, 20 files
 ➜  nvim git:(master) ✗ 
 ```
+
+### zsh
+
+### Plugins
+
+```zsh
+➜  ~ git:(master) echo $plugins
+git
+```
+and
+```zsh
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+```
+
+### bash
+
+```zsh
+➜  ~ git:(master) bat .bashrc 
+─────┬────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+     │ File: .bashrc
+─────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+   1 │ #
+   2 │ # ~/.bashrc
+   3 │ #
+   4 │ 
+   5 │ # If not running interactively, don't do anything
+   6 │ [[ $- != *i* ]] && return
+   7 │ 
+   8 │ alias ls='ls --color=auto'
+   9 │ alias grep='grep --color=auto'
+  10 │ PS1='[\u@\h \W]\$ '
+─────┴────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+```
+
+### konsole
+
+(Profile 2):
+
+<img height="1400" alt="image" src="https://github.com/user-attachments/assets/ddd1b7e0-cb03-4969-9eb2-7bbd412bc66c" />
+
+### git
+
+> From Oh my zsh, the git plugin
 
 ## License
 [LICENSE](https://github.com/seesee010/dotfiles/blob/master/LICENSE)
