@@ -23,3 +23,7 @@
 ###### docs
 !img/
 !img/**
+
+###### install-script
+!script/
+!script/**
