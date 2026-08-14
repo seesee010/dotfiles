@@ -118,7 +118,21 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 
 ## install
 
+### Dangerous
 
+```bash
+curl -fsSL https://raw.githubusercontent.com/seesee010/dotfiles/master/install.sh | bash
+```
+
+### Better way
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/seesee010/dotfiles/master/install.sh -o install.sh
+chmod +x install.sh
+
+vim install.sh # check the install.sh file
+bash install.sh
+```
 
 ## License
 [LICENSE](https://github.com/seesee010/dotfiles/blob/master/LICENSE)
