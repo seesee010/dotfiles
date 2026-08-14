@@ -6,5 +6,5 @@ vim.api.nvim_create_autocmd("FileType", {
     end,
 })
 
--- Idk that this will be used as plugin.
+-- Idk, this will be used as plugin.
 return {}

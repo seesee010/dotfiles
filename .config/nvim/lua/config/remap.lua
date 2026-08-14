@@ -21,3 +21,5 @@ vim.keymap.set({'i', 'n'}, 'Ü', ']')
 
 vim.keymap.set({'n', 'i'}, '´', '~')
 
+vim.keymap.set('n', '<leader>j', '<C-w>j')
+vim.keymap.set('n', '<leader>k', '<C-w>k')

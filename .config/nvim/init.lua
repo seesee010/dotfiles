@@ -5,10 +5,11 @@ vim.g.maplocalleader = ' '
 vim.opt.relativenumber = true
 vim.opt.number = true
 vim.opt.clipboard = 'unnamedplus'
-vim.opt.updatetime = 250 -- decrease update time
+vim.opt.updatetime = 250 -- increase update time
 
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
+vim.opt.colorcolumn = "100"
 
 -- Highlight when yanking (copying) text
   --  Try it with `yap` in normal mode

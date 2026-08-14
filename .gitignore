@@ -19,3 +19,7 @@
 
 ###### git
 !.gitconfig
+
+###### docs
+!img/
+!img/**
