@@ -6,8 +6,8 @@ Here are all my dotfiles i care about
 > [!NOTE]
 > This repo uses keyd,
 > It remaps my de-latin keyboard layout.
-> If you don't want to have that please consider deleting ~/.config/keyboard/default.conf
-> As this is a symlink, you need also to delete /etc/keyd/default.conf
+> If you don't want to have that please consider deleting `~/.config/keyboard/default.conf`
+> As this is a symlink, you need to delete `/etc/keyd/default.conf` too.
 
 ## TOC
 - [nvim](#nvim)
