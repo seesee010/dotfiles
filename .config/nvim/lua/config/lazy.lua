@@ -30,7 +30,9 @@ require("lazy").setup({
     { import = "plugins" },
     { import = "plugins.lsp" },
     { import = "plugins.fzf" },
-    { import = "themes" }
+    { import = "themes" },
+    { import = "plugins.viewer" },
+    { import = "plugins.fun" }
   },
   -- Configure any other settings here. See the documentation for more details.
   -- colorscheme that will be used when installing plugins.

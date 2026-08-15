@@ -10,6 +10,7 @@ vim.opt.updatetime = 250 -- increase update time
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 vim.opt.colorcolumn = "100"
+vim.opt.undofile = true
 
 -- Highlight when yanking (copying) text
   --  Try it with `yap` in normal mode
