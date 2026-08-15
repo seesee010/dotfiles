@@ -126,15 +126,15 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 
 ### keyd
 
-| **from**   | **to** |
-|------------|--------|
-| ö          | @      |
-| ä          | {      |
-| Ä          | }      |
-| ü          | [      |
-| Ü          | ]      |
-| ´          | ~      |
-| <Capslock> | <Esc>  |
+| **from**     | **to**  |
+|--------------|---------|
+| ö            | @       |
+| ä            | {       |
+| Ä            | }       |
+| ü            | [       |
+| Ü            | ]       |
+| ´            | ~       |
+| `<Capslock>` | `<Esc>` |
 
 ## install
 
