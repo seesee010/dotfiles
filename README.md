@@ -15,6 +15,7 @@ Here are all my dotfiles i care about
 - [bash](#bash)
 - [konsole](#konsole)
 - [git](#git)
+- [keyd](#keyd)
 - [Installation guide](#install)
 
 ## My setup
@@ -122,6 +123,18 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 ### git
 
 > From Oh my zsh, the git plugin
+
+### keyd
+
+| **from**   | **to** |
+|------------|--------|
+| ö          | @      |
+| ä          | {      |
+| Ä          | }      |
+| ü          | [      |
+| Ü          | ]      |
+| ´          | ~      |
+| <Capslock> | <Esc>  |
 
 ## install
 
