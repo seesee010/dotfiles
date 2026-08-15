@@ -11,6 +11,10 @@
 !.config/konsole/**
 .config/konsole/bookmarks*
 
+###### keyd
+!.config/keyboard/
+!.config/keyboard/**
+
 ###### shell
 !.zshrc
 !.bashrc
