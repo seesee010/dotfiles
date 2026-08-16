@@ -32,15 +32,15 @@ Secondary colorscheme (only for: sh, zsh, bash):
 
 ![colorscheme-kanagawa](img/colorscheme-kangawa.png)
 
-Third colorscheme (only loaded never used any more):
-
-[vesper](https://github.com/datsfilipe/vesper.nvim)
-
 > [!NOTE]
 > This colorscheme will be set as archived,
 > As i will just stick **everywhere** to bamboo.nvim
 >
 > So in future updates this thrme might already be inactive.
+
+Third colorscheme (only loaded never used any more):
+
+[vesper](https://github.com/datsfilipe/vesper.nvim)
 
 #### All my plugins
 
