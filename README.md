@@ -48,12 +48,16 @@ Third colorscheme (only loaded never used any more):
 
 ![lazy.vim](img/lazy.vim-plugins.png)
 
+Mason:
+
+![mason](img/mason.png)
+
 #### Structure
 
 (from `tree .`):
 
 ```zsh
-➜  nvim git:(master) ✗ tree .            
+➜  nvim git:(master) tree .
 .
 ├── init.lua
 ├── lazy-lock.json
@@ -63,8 +67,12 @@ Third colorscheme (only loaded never used any more):
     │   └── remap.lua
     ├── plugins
     │   ├── autopairs.lua
+    │   ├── fun
+    │   │   ├── playtime.lua
+    │   │   └── vimBeGood.lua
     │   ├── fzf
     │   │   ├── harpoon.lua
+    │   │   ├── telescope-file-browser.lua
     │   │   └── telescope.lua
     │   ├── lsp
     │   │   ├── cmp-dictionary.lua
@@ -73,17 +81,19 @@ Third colorscheme (only loaded never used any more):
     │   │   ├── lsp-config.lua
     │   │   └── nvim-treesitter.lua
     │   ├── tiny-inline-daignostic.lua
-    │   ├── trouple.lua
+    │   ├── trouble.lua
     │   ├── undo-tree.lua
-    │   └── vimBeGood.lua
+    │   └── viewer
+    │       ├── image.lua
+    │       └── markview.lua
     └── themes
         ├── bamboo.lua
         ├── init.lua
-        ├── kangawa.lua
+        ├── kanagawa.lua
         └── vesper.lua
 
-7 directories, 20 files
-➜  nvim git:(master) ✗ 
+9 directories, 24 files
+➜  nvim git:(master) 
 ```
 
 ### zsh
