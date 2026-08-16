@@ -183,3 +183,40 @@ aur-check() {
     done
     return "$exit_code"
 }
+
+# done by a really dumb clanker - I am not in charce for that dumb code.
+loc() {
+	local query="$1"
+	local target="$HOME/$query"
+
+	if [[ -z $query ]]; then
+		if ! cd "$HOME"; then
+			echo "Could not go into the $HOME directory"
+		fi
+	fi
+
+	if [[ -d $target ]]; then
+		if ! cd "$target"; then
+		fi
+	fi
+
+	target=$(
+		find "$HOME" \
+			-type d \
+			-not -path '*/.git' \
+			-not -path '*/node_modules' \
+			-not -path '*/.cache' \
+			-not -path '*/.local/share/Trash' \
+			-print 2>/dev/null |
+		fzf --filter="$query" |
+		head -n 1
+	)
+
+	if [[ -n $target ]]; then
+		cd "$target"
+		return 0
+	fi
+
+	echo "Directory not found!"
+	return 1
+}
