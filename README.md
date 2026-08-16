@@ -134,7 +134,7 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 
 (Profile 2):
 
-<img height="1400" alt="image" src="https://github.com/user-attachments/assets/ddd1b7e0-cb03-4969-9eb2-7bbd412bc66c" />
+![konsole](img/terminal.png)
 
 ### git
 
