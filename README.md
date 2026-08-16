@@ -6,8 +6,8 @@ Here are all my dotfiles i care about
 > [!NOTE]
 > This repo uses keyd,
 > It remaps my de-latin keyboard layout.
-> If you don't want to have that please consider deleting ~/.config/keyboard/default.conf
-> As this is a symlink, you need also to delete /etc/keyd/default.conf
+> If you don't want to have that please consider deleting `~/.config/keyboard/default.conf`
+> As this is a symlink, you need to delete `/etc/keyd/default.conf` too.
 
 ## TOC
 - [nvim](#nvim)
@@ -15,6 +15,7 @@ Here are all my dotfiles i care about
 - [bash](#bash)
 - [konsole](#konsole)
 - [git](#git)
+- [keyd](#keyd)
 - [Installation guide](#install)
 
 ## My setup
@@ -30,6 +31,12 @@ Secondary colorscheme (only for: sh, zsh, bash):
 [kanagawa](https://github.com/rebelot/kanagawa.nvim)
 
 ![colorscheme-kanagawa](img/colorscheme-kangawa.png)
+
+> [!NOTE]
+> This colorscheme will be set as archived,
+> As i will just stick **everywhere** to bamboo.nvim
+>
+> So in future updates this theme might already be inactive.
 
 Third colorscheme (only loaded never used any more):
 
@@ -122,6 +129,18 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 ### git
 
 > From Oh my zsh, the git plugin
+
+### keyd
+
+| **from**     | **to**  |
+|--------------|---------|
+| ö            | @       |
+| ä            | {       |
+| Ä            | }       |
+| ü            | [       |
+| Ü            | ]       |
+| ´            | ~       |
+| `<Capslock>` | `<Esc>` |
 
 ## install
 
