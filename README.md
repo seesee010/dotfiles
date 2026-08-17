@@ -20,7 +20,9 @@ Here are all my dotfiles i care about
 
 ## My setup
 
-My nerd font _IosevkaCustom_: [https://gist.github.com/88db9576bab457ea40fbab9249ef61e3.git](https://gist.github.com/88db9576bab457ea40fbab9249ef61e3.git)
+My nerd font _IosevkaCustom_: [https://gist.github.com/88db9576bab457ea40fbab9249ef61e3.git](https://gist.github.com/88db9576bab457ea40fbab9249ef61e3.git),
+font size: 16pt
+
 ### nvim
 
 Main colorscheme: [bamboo](https://github.com/ribru17/bamboo.nvim)
