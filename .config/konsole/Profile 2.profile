@@ -3,7 +3,7 @@ BorderWhenActive=false
 ColorScheme=New Color Scheme
 DimmValue=68
 FocusBorderColor=5,0,164
-Font=Hack,14,-1,5,400,0,0,0,0,0,0,0,0,0,0,1,,0,0
+Font=Iosevka Custom,16,-1,5,400,0,0,0,0,0,0,0,0,0,0,1,Extended,0,0
 
 [Cursor Options]
 CursorShape=0

@@ -193,21 +193,25 @@ loc() {
 		if ! cd "$HOME"; then
 			echo "Could not go into the $HOME directory"
 		fi
+		return 0
 	fi
 
 	if [[ -d $target ]]; then
 		if ! cd "$target"; then
+			echo "Could not cd into $target"
 		fi
+		return 0
 	fi
 
 	target=$(
 		find "$HOME" \
-			-type d \
-			-not -path '*/.git' \
-			-not -path '*/node_modules' \
-			-not -path '*/.cache' \
-			-not -path '*/.local/share/Trash' \
-			-print 2>/dev/null |
+			\( \
+				-path '*/.cache' \
+				-o -path '*/.git' \
+				-o -path '*/node_modules' \
+				-o -path '*/.local/share/Trash' \
+			\) -prune \
+			-o -type d -print 2>/dev/null |
 		fzf --filter="$query" |
 		head -n 1
 	)
