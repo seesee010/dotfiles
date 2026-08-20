@@ -11,7 +11,6 @@ vim.keymap.set({'o', 'x'}, 'iÄ', 'i}', { remap = true })
 vim.keymap.set({'o', 'x'}, 'aÄ', 'a}', { remap = true })
 vim.keymap.set({'i', 'n'}, 'ä', '{')
 vim.keymap.set({'i', 'n'}, 'Ä', '}')
-
 vim.keymap.set({'o', 'x'}, 'iü', 'i[', { remap = true })
 vim.keymap.set({'o', 'x'}, 'aü', 'a[', { remap = true })
 vim.keymap.set({'o', 'x'}, 'iÜ', 'i]', { remap = true })
@@ -23,3 +22,10 @@ vim.keymap.set({'n', 'i'}, '´', '~')
 
 vim.keymap.set('n', '<leader>j', '<C-w>j')
 vim.keymap.set('n', '<leader>k', '<C-w>k')
+
+-- some minor changes, for vim basics
+vim.keymap.set('n', '<C-u>', '<C-u>zz')
+vim.keymap.set('n', '<C-d>', '<C-d>zz')
+
+-- test
+vim.keymap.set('n', '<leader>t', ':w\n')

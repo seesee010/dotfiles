@@ -31,3 +31,6 @@
 ###### install-script
 !script/
 !script/**
+
+###### I'm creating a plugin, so I don't wanna have the unfinised one in the repo - clone it yourself / lazy.vim (when it is finished)
+.config/nvim/lua/plugins/telescope-dirfinder.nvim

@@ -13,5 +13,14 @@ return {
     	vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help tags' })
 	vim.keymap.set("n", "<leader>fk", "<cmd>Telescope keymaps<CR>", { desc = "Keymaps" })
 	vim.keymap.set("n", "<leader>fc", "<cmd>Telescope commands<CR>", { desc = "Commands" })
-    end
+
+	-- "edit packages" - currently broken!
+	vim.keymap.set('n', '<leader>ep', function ()
+		require('telescope.builtin').find_files {
+			cwd = vim.fs.joinpath(vim.fn.stdpath('data'), 'lazy')
+		}
+	end)
+
+	require('telescope').setup({})
+    end,
 }
