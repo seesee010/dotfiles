@@ -23,9 +23,49 @@ vim.keymap.set({'n', 'i'}, '´', '~')
 vim.keymap.set('n', '<leader>j', '<C-w>j')
 vim.keymap.set('n', '<leader>k', '<C-w>k')
 
--- some minor changes, for vim basics
+-- some minor changes, to center the following:
 vim.keymap.set('n', '<C-u>', '<C-u>zz')
 vim.keymap.set('n', '<C-d>', '<C-d>zz')
 
+vim.keymap.set('n', 'n', 'nzz')
+vim.keymap.set('n', 'N', 'Nzz')
+
 -- test
 vim.keymap.set('n', '<leader>t', ':w\n')
+
+-- more...
+vim.keymap.set('n', 'gd', function ()
+	vim.lsp.buf.definition()
+end)
+
+vim.keymap.set('n', 'gD', function ()
+	vim.lsp.buf.declaration()
+end)
+
+-- vim.keymap.set('n', '<leader>rn', function () -- as this is already in nvim itself (grn) (v0.12+)
+-- 	vim.lsp.buf.rename()
+-- end)
+
+-- diagnostic
+vim.keymap.set('n', ']d', function ()
+	vim.diagnostic.goto_prev()
+end)
+
+vim.keymap.set('n', '[d', function ()
+	vim.diagnostic.goto_next()
+end)
+
+-- quickfix 
+-- as this is already in nvim itself (grr) (v0.12+), if you would try 'gr' it would wait for you to press a further key, but this also means that on every 'gr' you have to wait a couple of seconds, so nvim register it as a seperate motion. so 'grr' would be faster.
+
+-- vim.keymap.set('n', 'gr', function ()
+--	vim.lsp.buf.references()
+-- end)
+
+vim.keymap.set('n', '<C-j>', ':cnext<CR>')
+vim.keymap.set('n', '<C-k>', ':cprev<CR>')
+
+-- You really don't have to do this, because it is not that important to see your references.
+-- But if you want to see them, you can do this:
+-- vim.keymap.set('n', '', ':copen<CR>')
+vim.keymap.set('n', '<leader>q', ':cclose<CR>') -- you could also use ':q'
