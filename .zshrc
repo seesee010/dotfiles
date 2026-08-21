@@ -204,16 +204,21 @@ loc() {
 	fi
 
 	target=$(
-		find "$HOME" \
-			\( \
-				-path '*/.cache' \
-				-o -path '*/.git' \
-				-o -path '*/node_modules' \
-				-o -path '*/.local/share/Trash' \
-			\) -prune \
-			-o -type d -print 2>/dev/null |
-		fzf --filter="$query" |
-		head -n 1
+		which fd 1>/dev/null 2>/dev/null
+		if [[ $? -eq 0 ]]; then
+			fd --type d --follow --hidden --exclude .git --exclude node_modules --exclude .cache --exclude .local/share/Trash --filter="$query"
+		else
+			find "$HOME" \
+				\( \
+					-path '*/.cache' \
+					-o -path '*/.git' \
+					-o -path '*/node_modules' \
+					-o -path '*/.local/share/Trash' \
+				\) -prune \
+				-o -type d -print 2>/dev/null |
+				fzf --filter="$query" |
+				head -n 1
+		fi
 	)
 
 	if [[ -n $target ]]; then

@@ -8,11 +8,11 @@ return {
 		transparent_bg = false,
 		set_arrow_to_diag_color = true,
 
-		options = {
-			severity = {
-				vim.diagnostic.severity.ERROR
-			}
-		}
+		options = { multilines = {
+			enabled = true,
+			always_show = true,
+			severity = { vim.diagnostic.severity.ERROR },
+		}}
 	})
         vim.diagnostic.config({ virtual_text = false }) -- Disable Neovim's default virtual text diagnostics
     end,
