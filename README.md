@@ -156,7 +156,7 @@ on other tabs the other stuff like zsh.
 
 ### keyd
 
-| **from**     | **to**  |
+| **from**     | **to** (= "programmer" ) |
 |--------------|---------|
 | ö            | @       |
 | ä            | {       |
@@ -165,6 +165,8 @@ on other tabs the other stuff like zsh.
 | Ü            | ]       |
 | ´            | ~       |
 | `<Capslock>` | `<Esc>` |
+
+If you want to change the mode you need to press: `C-b`
 
 ## install
 
