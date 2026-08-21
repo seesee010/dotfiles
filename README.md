@@ -76,7 +76,6 @@ Mason:
     │   │   └── vimBeGood.lua
     │   ├── fzf
     │   │   ├── harpoon.lua
-    │   │   ├── telescope-file-browser.lua
     │   │   └── telescope.lua
     │   ├── lsp
     │   │   ├── cmp-dictionary.lua
@@ -84,6 +83,11 @@ Mason:
     │   │   ├── lazydev.lua
     │   │   ├── lsp-config.lua
     │   │   └── nvim-treesitter.lua
+    │   ├── supermaven.lua
+    │   ├── telescope-dirfinder.nvim
+    │   │   ├── LICENSE
+    │   │   ├── lua
+    │   │   └── README.md
     │   ├── tiny-inline-daignostic.lua
     │   ├── trouble.lua
     │   ├── undo-tree.lua
@@ -96,8 +100,7 @@ Mason:
         ├── kanagawa.lua
         └── vesper.lua
 
-9 directories, 24 files
-➜  nvim git:(master) 
+11 directories, 26 files
 ```
 
 ### zsh
@@ -142,7 +145,7 @@ I only use tmux as like virtualizing tabs.
 Mostly on tab1 (1 indexed): nvim
 on other tabs the other stuff like zsh.
 
-![tmux](#img/tmux.png)
+![tmux](img/tmux.png)
 
 ### konsole
 
@@ -156,7 +159,7 @@ on other tabs the other stuff like zsh.
 
 ### keyd
 
-| **from**     | **to**  |
+| **from**     | **to** (= "programmer" ) |
 |--------------|---------|
 | ö            | @       |
 | ä            | {       |
@@ -165,6 +168,8 @@ on other tabs the other stuff like zsh.
 | Ü            | ]       |
 | ´            | ~       |
 | `<Capslock>` | `<Esc>` |
+
+If you want to change the mode you need to press: `C-b`
 
 ## install
 
