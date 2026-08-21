@@ -142,7 +142,7 @@ I only use tmux as like virtualizing tabs.
 Mostly on tab1 (1 indexed): nvim
 on other tabs the other stuff like zsh.
 
-![tmux](#img/tmux.png)
+![tmux](img/tmux.png)
 
 ### konsole
 
