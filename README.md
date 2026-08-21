@@ -76,7 +76,6 @@ Mason:
     │   │   └── vimBeGood.lua
     │   ├── fzf
     │   │   ├── harpoon.lua
-    │   │   ├── telescope-file-browser.lua
     │   │   └── telescope.lua
     │   ├── lsp
     │   │   ├── cmp-dictionary.lua
@@ -84,6 +83,11 @@ Mason:
     │   │   ├── lazydev.lua
     │   │   ├── lsp-config.lua
     │   │   └── nvim-treesitter.lua
+    │   ├── supermaven.lua
+    │   ├── telescope-dirfinder.nvim
+    │   │   ├── LICENSE
+    │   │   ├── lua
+    │   │   └── README.md
     │   ├── tiny-inline-daignostic.lua
     │   ├── trouble.lua
     │   ├── undo-tree.lua
@@ -96,8 +100,7 @@ Mason:
         ├── kanagawa.lua
         └── vesper.lua
 
-9 directories, 24 files
-➜  nvim git:(master) 
+11 directories, 26 files
 ```
 
 ### zsh
