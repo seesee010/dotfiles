@@ -1,3 +1,3 @@
 return {
-	'sammce/fleeting.nvim'
+	"sammce/fleeting.nvim",
 }
