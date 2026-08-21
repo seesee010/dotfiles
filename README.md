@@ -13,6 +13,7 @@ Here are all my dotfiles i care about
 - [nvim](#nvim)
 - [zsh](#zsh)
 - [bash](#bash)
+- [tmux](#tmux)
 - [konsole](#konsole)
 - [git](#git)
 - [keyd](#keyd)
@@ -132,6 +133,16 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
   10 │ PS1='[\u@\h \W]\$ '
 ─────┴────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
 ```
+
+### tmux
+
+Leader: `<C-k>`, as I think this is more ergonomic.
+
+I only use tmux as like virtualizing tabs.
+Mostly on tab1 (1 indexed): nvim
+on other tabs the other stuff like zsh.
+
+![tmux](#img/tmux.png)
 
 ### konsole
 
