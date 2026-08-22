@@ -1,3 +1,0 @@
-return {
-	"sammce/fleeting.nvim",
-}
