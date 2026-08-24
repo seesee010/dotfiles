@@ -229,3 +229,14 @@ loc() {
 	echo "Directory not found!"
 	return 1
 }
+
+# auto start tmux
+if [[ -z "$TMUX" ]]; then
+    if ! tmux has-session -t main 2>/dev/null; then
+        tmux new-session -d -s main -n nvim
+	tmux new-window -t main:1 -n zsh
+        tmux new-window -t main:2 -n zsh
+    fi
+
+    tmux attach-session -t main
+fi
