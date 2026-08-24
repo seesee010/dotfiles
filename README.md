@@ -26,25 +26,16 @@ font size: 16pt
 
 ### nvim
 
-Main colorscheme: [bamboo](https://github.com/ribru17/bamboo.nvim)
+> [!IMPORTANT]
+> There are still old background images of themes in img/ and in source code, but they are set as depricated.
 
-![colorscheme-bamboo](img/colorscheme-bamboo.png)
+Main colorscheme: [rose-pipe](https://github.com/rose-pine/neovim)
 
-Secondary colorscheme (only for: sh, zsh, bash):
+![init-lua](img/init-lua.png)
 
-[kanagawa](https://github.com/rebelot/kanagawa.nvim)
+> Currently I manually zoom in, but i want to solve this problem soon.
+> My current zoom of init-lua is set as big as needed so the terminal only shows me `40` lines.
 
-![colorscheme-kanagawa](img/colorscheme-kangawa.png)
-
-> [!NOTE]
-> This colorscheme will be set as archived,
-> As i will just stick **everywhere** to bamboo.nvim
->
-> So in future updates this theme might already be inactive.
-
-Third colorscheme (only loaded never used any more):
-
-[vesper](https://github.com/datsfilipe/vesper.nvim)
 
 #### All my plugins
 
