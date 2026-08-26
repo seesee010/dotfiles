@@ -9,6 +9,11 @@ if ! command -v git &>/dev/null; then
 	exit 1
 fi
 
+if ! command -v rsync &>/dev/null; then
+    echo 'rsync not installed, installing...'
+    sudo pacman -S --noconfirm rsync
+fi
+
 mkdir -p "$target"
 if ! cd "$target"; then
 	echo "Error while cd into: $target"
@@ -42,7 +47,7 @@ else
 fi
 
 shopt -s dotglob
-cp -r "$target"/dotfiles/* "$HOME"
+rsync -a --exclude='.git' "$target/dotfiles/" "$HOME/"
 
 # Symlink
 sudo mkdir -p /etc/keyd
