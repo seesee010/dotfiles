@@ -17,7 +17,7 @@ fi
 
 # Clone "$clone" or pull "$target/dotfiles"
 if [[ ! -d "$target/dotfiles" ]]; then
-	if ! git clone "$clone"; then
+	if ! git clone --recurse-submodules "$clone"; then
 		echo "Error while cloning $clone"
 		exit 1
 	fi
@@ -28,6 +28,10 @@ else
 	fi
 	if ! git pull; then
 		echo "Error while pulling $clone"
+		exit 1
+	fi
+	if ! git submodule update --init --recursive; then
+		echo "Error while updating submodules"
 		exit 1
 	fi
 fi
