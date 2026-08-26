@@ -26,11 +26,16 @@ else
 		echo "Error while cd into: $target/dotfiles"
 		exit 1
 	fi
-	if ! git pull; then
-		echo "Error while pulling $clone"
+	if ! git fetch origin; then
+		echo "Error while fetching $clone"
 		exit 1
 	fi
-	if ! git submodule update --init --recursive; then
+	branch=$(git rev-parse --abbrev-ref HEAD)
+	if ! git reset --hard "origin/$branch"; then
+		echo "Error while resetting to origin/$branch"
+		exit 1
+	fi
+	if ! git submodule update --init --recursive --force; then
 		echo "Error while updating submodules"
 		exit 1
 	fi
