@@ -167,7 +167,8 @@ If you want to change the mode you need to press: `C-b`
 ### Dangerous
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/seesee010/dotfiles/master/script/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/seesee010/dotfiles/master/script/install.sh -o /tmp/install.sh
+bash /tmp/install.sh
 ```
 
 ### Better way
