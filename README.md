@@ -30,7 +30,7 @@ font size: 16pt
 > [!IMPORTANT]
 > There are still old background images of themes in img/ and in source code, but they are set as depricated.
 
-Main colorscheme: [rose-pipe](https://github.com/rose-pine/neovim)
+Main colorscheme: [rose-pine](https://github.com/rose-pine/neovim)
 
 ![init-lua](img/init-lua.png)
 
