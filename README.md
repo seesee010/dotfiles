@@ -50,8 +50,6 @@ Mason:
 
 #### Structure
 
-(from `tree .`):
-
 ```zsh
 ➜  nvim git:(master) tree .
 .
