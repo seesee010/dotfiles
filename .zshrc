@@ -206,7 +206,12 @@ loc() {
 	target=$(
 		which fd 1>/dev/null 2>/dev/null
 		if [[ $? -eq 0 ]]; then
-			fd --type d --follow --hidden --exclude .git --exclude node_modules --exclude .cache --exclude .local/share/Trash --filter="$query"
+			fd --type d --follow --hidden \
+  --exclude .git \
+  --exclude node_modules \
+  --exclude .cache \
+  --exclude .local/share/Trash \
+  "$query"
 		else
 			find "$HOME" \
 				\( \
