@@ -75,9 +75,7 @@ Mason:
     │   │   └── nvim-treesitter.lua
     │   ├── supermaven.lua
     │   ├── telescope-dirfinder.nvim
-    │   │   ├── LICENSE
-    │   │   ├── lua
-    │   │   └── README.md
+    │   │   └── ^plugin dev^
     │   ├── tiny-inline-daignostic.lua
     │   ├── trouble.lua
     │   ├── undo-tree.lua
