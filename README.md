@@ -9,15 +9,11 @@ Here are all my dotfiles i care about
 > If you don't want to have that please consider deleting `~/.config/keyboard/default.conf`
 > As this is a symlink, you need to delete `/etc/keyd/default.conf` too.
 
-> [!NOTE]
-> the keys setup will be depricated, soon.
-> As I will switch to: carbonfet dactyl manuf. fork
-> In the future there will be a repo to that topic - as I will show how i have done it.
-
 ## TOC
 - [nvim](#nvim)
 - [zsh](#zsh)
 - [bash](#bash)
+- [keyboard](#keyboard)
 - [tmux](#tmux)
 - [konsole](#konsole)
 - [git](#git)
@@ -132,6 +128,9 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
   10 │ PS1='[\u@\h \W]\$ '
 ─────┴────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
 ```
+### keyboard
+
+Read: [keyboard](https://github.com/seesee010/keyboard)
 
 ### tmux
 
