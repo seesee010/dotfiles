@@ -52,9 +52,9 @@ Mason:
 
 ```zsh
 ➜  nvim git:(master) ✗ nvimrc-version # not a real command!
->> master | commit 6e8156828fa65b1d1fa0c54be71f7e6686652af3
+>> master | commit b036692
 
-➜  nvim git:(master) ✗ tree .
+➜  nvim git:(master) tree .
 .
 ├── init.lua
 ├── lazy-lock.json
@@ -86,12 +86,14 @@ Mason:
     │       ├── image.lua
     │       └── markview.lua
     └── themes
-        ├── bamboo.lua
-        ├── init.lua
-        ├── kanagawa.lua
-        └── vesper.lua
+        ├── dThemes
+        │   ├── bamboo.lua
+        │   ├── kanagawa.lua
+        │   ├── rose-pine.lua
+        │   └── vesper.lua
+        └── init.lua
 
-9 directories, 26 files
+10 directories, 27 files
 ```
 
 ### zsh
