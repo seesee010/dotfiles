@@ -51,8 +51,8 @@ Mason:
 #### Structure
 
 ```zsh
-➜  nvim git:(master) ✗ nvimrc-version
->> commit 6e8156828fa65b1d1fa0c54be71f7e6686652af3
+➜  nvim git:(master) ✗ nvimrc-version # not a real command!
+>> master | commit 6e8156828fa65b1d1fa0c54be71f7e6686652af3
 
 ➜  nvim git:(master) ✗ tree .
 .
