@@ -51,7 +51,7 @@ Mason:
 #### Structure
 
 ```zsh
-➜  nvim git:(master) tree .
+➜  nvim git:(master) ✗ tree .
 .
 ├── init.lua
 ├── lazy-lock.json
@@ -60,22 +60,22 @@ Mason:
     │   ├── lazy.lua
     │   └── remap.lua
     ├── plugins
+    │   ├── auto-fmt.lua
     │   ├── autopairs.lua
     │   ├── fun
     │   │   ├── playtime.lua
     │   │   └── vimBeGood.lua
     │   ├── fzf
     │   │   ├── harpoon.lua
+    │   │   ├── telescope-dirfinder.lua
     │   │   └── telescope.lua
     │   ├── lsp
     │   │   ├── cmp-dictionary.lua
     │   │   ├── cmp.lua
     │   │   ├── lazydev.lua
-    │   │   ├── lsp-config.lua
+    │   │   ├── mason.lua
     │   │   └── nvim-treesitter.lua
     │   ├── supermaven.lua
-    │   ├── telescope-dirfinder.nvim
-    │   │   └── ^plugin dev^
     │   ├── tiny-inline-daignostic.lua
     │   ├── trouble.lua
     │   ├── undo-tree.lua
@@ -88,7 +88,7 @@ Mason:
         ├── kanagawa.lua
         └── vesper.lua
 
-11 directories, 26 files
+9 directories, 26 files
 ```
 
 ### zsh
