@@ -221,12 +221,9 @@ loc() {
 	target=$(
 		which fd 1>/dev/null 2>/dev/null
 		if [[ $? -eq 0 ]]; then
-			fd --type d --follow --hidden \
-  --exclude .git \
-  --exclude node_modules \
-  --exclude .cache \
-  --exclude .local/share/Trash \
-  "$query"
+			fd --type d --hidden --follow \
+  			--exclude '.git' --exclude 'node_modules' --exclude '.cache' --exclude '.local/share/Trash' \
+  			-- "$query" "$HOME" 2>/dev/null | head -n 1
 		else
 			find "$HOME" \
 				\( \
