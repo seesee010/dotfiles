@@ -72,7 +72,9 @@ ZSH_THEME="robbyrussell"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
 
-source $ZSH/oh-my-zsh.sh
+# AI FIX 2026-08-31: Guarded oh-my-zsh source — was `source $ZSH/oh-my-zsh.sh` which failed
+# when ~/.oh-my-zsh was missing (fixed by cloning https://github.com/ohmyzsh/ohmyzsh.git)
+[[ -f "$ZSH/oh-my-zsh.sh" ]] && source "$ZSH/oh-my-zsh.sh"
 
 # User configuration
 
@@ -104,8 +106,21 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# AI FIX 2026-08-31: zsh plugins — cloned from source (no AUR) to fix missing color highlighting
+# Original was two hard-coded `source /usr/share/...` lines which failed (files missing).
+# Fixed by cloning from https://github.com/zsh-users/zsh-autosuggestions and
+# https://github.com/zsh-users/zsh-syntax-highlighting to /usr/share/zsh/plugins/
+# and fallback to $HOME/.local/share/zsh/plugins/. Now robust on Omarchy/Arch.
+if [[ -f /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh ]]; then
+	source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+elif [[ -f "$HOME/.local/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh" ]]; then
+	source "$HOME/.local/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh"
+fi
+if [[ -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]]; then
+	source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+elif [[ -f "$HOME/.local/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ]]; then
+	source "$HOME/.local/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+fi
 
 # I want to always be in ~/devo
 mkdir -p ~/devo
@@ -235,13 +250,15 @@ loc() {
 	return 1
 }
 
-# auto start tmux
+# AI FIX 2026-08-31: tmux autostart — fixed to exactly 2 windows 1:nvim 2:zsh
+# Original created window 1:nvim via new-session then tried new-window -t main:1 (fails: index 1 in use)
+# and new-window -t main:2 -> resulted in error and confusing 2-window state. With base-index 1,
+# new-session -d -s main -n nvim already creates 1:nvim, so only need one new-window at index 2.
+# Never use AUR; tmux from source/pacman is fine.
 if [[ -z "$TMUX" ]]; then
     if ! tmux has-session -t main 2>/dev/null; then
         tmux new-session -d -s main -n nvim
-	tmux new-window -t main:1 -n zsh
         tmux new-window -t main:2 -n zsh
     fi
-
     tmux attach-session -t main
 fi

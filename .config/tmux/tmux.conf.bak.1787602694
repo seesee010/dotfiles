@@ -3,12 +3,6 @@
 
 set-environment -g TMUX_PLUGIN_MANAGER_PATH "~/.config/tmux/plugins" # plugins directory
 
-# AI FIX 2026-08-31: Explicitly set tmux to zsh per user request — terminal SHALL ALWAYS start in zsh
-# but `bash` must remain usable standalone (not via bashrc exec). This forces tmux panes to zsh
-# even if server was started from bash, without touching .bashrc.
-set -g default-shell /usr/bin/zsh
-set -g default-command "/usr/bin/zsh -l"
-
 # General Config
 set -sg terminal-overrides ",*:RGB" # enable true color support
 set -g escape-time 0 # no delay for escape key
