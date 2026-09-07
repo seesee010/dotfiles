@@ -13,7 +13,7 @@ Here are all my dotfiles i care about
 - [nvim](#nvim)
 - [zsh](#zsh)
 - [bash](#bash)
-- [keyboard](#keyboard)
+- [keyboard](https://github.com/seesee010/keyboard)
 - [tmux](#tmux)
 - [konsole](#konsole)
 - [git](#git)
