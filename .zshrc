@@ -123,8 +123,8 @@ elif [[ -f "$HOME/.local/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-hi
 fi
 
 # I want to always be in ~/devo
-mkdir -p ~/devo
-cd ~/devo
+mkdir -p "$HOME/devo"
+cd "$HOME/devo"
 
 # Add zig to the path
 path+=("$HOME/.inPath/zig")
