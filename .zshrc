@@ -128,6 +128,7 @@ cd "$HOME/devo"
 
 # Add zig to the path
 path+=("$HOME/.inPath/zig")
+path+=("$HOME/.cargo/bin")
 # set that git will always see my branch as "the right one" so it will be pushed!
 git config --global push.autoSetupRemote true
 
@@ -259,3 +260,8 @@ if [[ -z "$TMUX" ]]; then
     fi
     tmux attach-session -t main
 fi
+
+alias calc='mathypad'
+
+# in ~/.zshrc
+bindkey -s ^f "tmux-sessionizer\n"

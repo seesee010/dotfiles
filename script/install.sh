@@ -10,8 +10,8 @@ if ! command -v git &>/dev/null; then
 fi
 
 if ! command -v rsync &>/dev/null; then
-    echo 'rsync not installed, installing...'
-    sudo pacman -S --noconfirm rsync
+	echo 'rsync not installed, installing...'
+	sudo pacman -S --noconfirm rsync
 fi
 
 mkdir -p "$target"
@@ -55,6 +55,16 @@ if [[ ! -L "$keydpath" ]]; then
 	sudo ln -s "$HOME/.config/keyboard/default.conf" "$keydpath"
 else
 	echo "Symlink already exists: $keydpath"
+fi
+
+# NOTE: this is archlinux specific, if you don't want that please feel free to delete this paragraph
+current=$(archlinux-java status | grep '(default)' | awk '{print $1}')
+if [ "$current" != "java-8-openjdk" ]; then
+	sudo pacman -S jdk8-openjdk
+	echo "Setting default Java to java-8-openjdk..."
+	sudo archlinux-java set java-8-openjdk
+else
+	echo "java-8-openjdk is already your default."
 fi
 
 echo 'Done!'
